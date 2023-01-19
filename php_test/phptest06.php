@@ -16,11 +16,19 @@ $wage = array (
         array(3,"冯某","职员",1500.00)
         )
 );
-      print_r($wage["市场部"]);
+// print_r($wage["市场部"]);
 foreach($wage as $sector => $table){
-    echo '<tabel border="1" width="600" align="center">';
-    echo '<caption><h2>' . $sector . '十月份工资表</h2></caption>';
-    echo '<tr bgcolor="#dddddd"><th>编号</th><th>姓名</th><th>职务</th><th>工资</th></tr>';
-    echo '</table>';
+    echo "<table border='1' width='600' align='center'>";
+    echo "<caption><h2>$sector 十月份工资表</h2></caption>";
+    echo "<tr bgcolor='#dddddd' align='center'><th>编号</th><th>姓名</th><th>职务</th><th>工资</th></tr>";
+    foreach($table as $row){
+        echo '<tr align="center">';
+
+        foreach($row as $col){
+            echo '<td>'. $col . '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table><br>';
 }
 ?>
