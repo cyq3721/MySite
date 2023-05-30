@@ -15,12 +15,12 @@ insert into Orders values
                      (null,1,49.99,'2007-04-15'),
                      (null,2,74.98,'2007-04-19'),
                      (null,3,24.99,'2007-05-01');
-INSERT INTO Order Items VALUES
+INSERT INTO Order_Items VALUES
                           (1, '0-672-31697-8', 2),
                           (2, '0-672-31769-9', 1),
                           (3, '0-672-31769-9', 1),
                           (3, '0-672-31509-2', 1),
                           (4, '0-672-31745-1', 3);
-INSERT INTO Book Reviews VALUES
+INSERT INTO Book_Reviews VALUES
                            ('0-672-31697-8', 'The Morgan book is clearly written and goes well beyond
                                              most of the basic Java books out there.');
