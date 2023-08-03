@@ -5,6 +5,19 @@
     <meta charset="utf-8" />
     <meta name="description" content="这是我开发的第一个网页">
     <meta name="keywords" content="杰瑞教育 HTML5 网页开发">
+    <style type="text/css">
+     #testTransition{
+       width:100px;
+       height:20px;
+       background-color:blue;
+       transition:all 2s ease .2s;
+       -moz-transition:width 2s .2s;
+     }
+     #testTransition:hover{
+       width:200px;
+       background-color:CadetBlue;
+     }
+    </style>
   </head>
   <body>
     <h1>欢迎来到HTML5的奇幻世界！</h1>
@@ -65,5 +78,8 @@
     <table border="1px" width="500px">
       <caption><b>特别休假申请单</b></caption>
     </table>
+    <br />
+    <div id="testTransition">
+    </div>
   </body>
 </html>
