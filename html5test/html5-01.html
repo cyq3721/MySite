@@ -17,19 +17,24 @@
        width:200px;
        background-color:CadetBlue;
      }
-     div{
+     #div2{
        width:100px;
        height:100px;
        background-color:red;
        text-align:center;
-       
+       text-decoration:none;
+       overflow:scroll;
+     }
+     #kuangjia{
+       width:380px;
+       text-align:center;
      }
     </style>
   </head>
   <body>
     <h1>欢迎来到HTML5的奇幻世界！</h1>
     <blockquote cite="http://www.baidu.com">百度</blockquote>
-    <div style="width:380px; height:200px; background-color:green;">
+    <div style="width:380px; height:200px; background-color:green;overflow=auto;text-shadow:2px 2px 2px black;color:white;">
     <dl>
       <dt>标题1</dt>
       <dd>列表的描述kkkkkkdjfkdfjkjfkjf肯德基咖啡机 。</dd>
@@ -94,6 +99,16 @@
     </div>
     <div id="div2">
       This is div2
+    </div>
+    <br />
+    <div id="kuangjia">
+      <p title="study">前端学习</p>
+      <select name="kuangjia">
+	<option>框架</option>
+	<option selected="selected">Boostrap</option>
+	<option disabled="disabled">JQuery</option>
+	<option> AngularJS</option>
+      </select>
     </div>
   </body>
 </html>
