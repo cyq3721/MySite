@@ -5,7 +5,8 @@
         <meta charset="utf-8" />
     </head>
     <body>
-        <h1>Book-O-Rama Search Results</h1>
+	<div>
+        <h1 >Book-O-Rama Search Results</h1>
         <?php
         $searchtype = $_POST['searchtype'];
         $searchterm = trim($_POST['searchterm']);
@@ -15,7 +16,7 @@
                  Please go back and try again.</p>';
             exit;
             }
-
+	 
         switch ($searchtype){
                 case 'Title':
                 case 'Author':
@@ -62,5 +63,6 @@
         $stmt->free_result();
         $db->close();
         ?>
+	</div>
     </body>
 </html>
