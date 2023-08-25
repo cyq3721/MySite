@@ -16,7 +16,7 @@
                  Please go back and try again.</p>';
             exit;
             }
-	 
+	
         switch ($searchtype){
                 case 'Title':
                 case 'Author':
