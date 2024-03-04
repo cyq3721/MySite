@@ -20,6 +20,15 @@
 	echo htmlspecialchars($tireqty) . " tires <br />";
 	echo htmlspecialchars($oilqty) . " oils  <br />";
 	echo htmlspecialchars($sparkqty) . " spark plugs <br />";
+
+	define('TIREPRICE', 100);
+	define('OILPRICE', 10);
+	define('SPARKPRICE', 4);
+
+	$totalqty = 0;
+	$total = $tireqty + $oilqty + $sparkqty;
+
+	echo "<p>你总共购买了: " . $totalqty . "<br />";
 	?>
     </body>
 </html>
