@@ -25,6 +25,7 @@
                 <tr>
                     <?php
                     $mess = "";
+		    
                     if(isset($_POST['submit'])){
                         if($_POST['num1'] == ""){
                             $mess .="第一个数不能为空!<br>";
