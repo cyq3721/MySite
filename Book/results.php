@@ -16,19 +16,22 @@
                  Please go back and try again.</p>';
             exit;
             }
-	
+	echo $searchtype . "<br />". $searchterm;
         switch ($searchtype){
                 case 'Title':
                 case 'Author':
                 case 'ISBN':
                     break;
                 default:
-                   echo '<p>That is not a volid search type. <br />
+
+
+		echo '<p>That is not a volid search type. <br />
                         Please go back and try again. </p>';
                 exit;
                 }
 
-        $db = new mysqli('127.0.0.1', 'cyq', 'cyq1980112');
+        $db = new mysqli('127.0.0.1', 'cyq', 'cyq198012');
+	echo $db;
         if(mysqli_connect_errno()){
             echo '<p>Error:Could not connect to database.<br />
                  Please try again later. </p>';
@@ -39,7 +42,7 @@
             
             }
 
-        $db->select_db('books');
+        $db->select_db('bookorama');
         $query = "select isbn, author,title,price
                   from books where $searchtype=?";
 
