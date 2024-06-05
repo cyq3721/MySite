@@ -1,26 +1,25 @@
 <!doctype html>
 <html>
     <head>
-        <title>Book-O-Rama Catalog Search</title>
-        <meta charset="utf-8" />
+	<title>Book-O-Rama Catalog Search</title>
+	<meta charset="utf-8" />
     </head>
     <body>
-      <div align="center">
-        <h1>Book-O-Rama Catalog Search</h1>
-
-        <form action="results.php" method="post">
-            <p><strong>Choose Search Type:</strong></p>
-            <select name="searchtype">
-                <option value="Author">Author</option>
-                <option value="Title">Title</option>
-                <option value="ISBN">ISBN</option>
-            </select>
-	    
-
-            <p><strong>Enter Search Term:</strong></p>
-            <input type="text" name="searchterm" size="40">
-            <p><input type="submit" name="submit" value="search"></p>
-        </form>
+	<div align="center">
+	<h1>Book-O-Rama Catalog Search</h1>
+	<form action="results.php" method="post">
+	    <p><stong>Choose Search Type:</stong>
+		<select name="searchtype">
+		    <option value="Author">Author</option>
+		    <option value="Title"> Title</option>
+		    <option value="ISBN">ISBN</option>
+		</select>
+	    </p>
+	    <p><strong>Eenter Search Term:</strong><br />
+		<input type="text" name="searchterm" size="40">
+	    </p>
+	    <p><input type="submit" name="submit" value="search"></p>
+	</form>
 	</div>
     </body>
 </html>
