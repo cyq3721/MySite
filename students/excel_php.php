@@ -1,13 +1,5 @@
-<!doctype html>
-<html>
-    <head>
-	<title>Uploading ... </title>
-	<meta charset="utf-8" />
-    </head>
-    <body>
-	<h1>Uploading File ... </h1>
-
 	<?php
+	include "db_conn.php";
 	if($_FILES['the_file']['error'] > 0){
 	    echo 'Problem: ';
 	    switch($_FILES['the_file']['error']){
@@ -78,18 +70,23 @@
 	$worksheet = $spreadsheet->getActiveSheet();
 	$highestRow = $worksheet->getHighestRow();
 	$highestColumn = $worksheet->getHighestColumn();
-	echo $highestRow . "行" . $highestColumn .'列 <br />'  ;
+	$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn);   //列的索引数（即第几列
+	echo $highestRow . "行" . $highestColumnIndex .'列 <br />'  ;
 
-	$cell = $worksheet->getCell('b2');
-	echo $cell->getValue() ;
-	$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn);   //列的索引数（即第几列）
+	$cell1 = $worksheet->getCell('a1');
+	$cell2 = $worksheet->getCell('b1');
+	$cell3 = $worksheet->getCell('c1');
+	$cell4 = $worksheet->getCell('d1');
+	echo $cell1->getValue()." " ;
+	echo $cell2->getValue()." " ;
+	echo $cell3->getValue()." " ;
+	echo $cell4->getValue()." " ;
+
 
 
 	
 	//	echo $class;
 
-//	echo $highestColumnIndex;
+	//	echo $highestColumnIndex;
 	?>
 	
-    </body>
-</html>
