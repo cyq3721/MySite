@@ -46,7 +46,7 @@
 	 display: none;
      }
      fieldset{
-	 border:1px solid #555;
+s	 border:1px solid #555;
        margin-bottom: 20px;
        
      }
@@ -54,12 +54,26 @@
        color:#333;
        font-size:14px;
      }
+     input[name=my_submit]{
+	 width:100px;
+	 text-align:center;
+	 padding:0;
+	 display:block;
+	 margin:10px auto;
+	 background:#f8fdff;
+     }
+     input:focus:valid{
+	 outline:1px solid balue;
+     }
+     input:focus:invalid{
+	 outline:1px solid red;
+     }
     </style>
   </head>
   <body>
     <div class="bg">
       <div class="bgfiled">
-	<form action="" method="post" id="form1"></form>
+	<form action="" method="post" id="form1">
 	  <fieldset>
 	    <legend>账号信息</legend>
 	    <div class="left">
@@ -92,10 +106,48 @@
 	  </fieldset>
 	  <fieldset>
 	    <legend>个人信息</legend>
+	    <div class="left">
+	      <label for="name">姓名:</label>
+	    </div>
+	    <div class="right">
+	      <input type="text" name="my_name" id="name"> 
+	    </div>
+	      <div class="left">
+	      <label for="age">年龄:</label>
+	    </div>
+	    <div class="right">
+	      <input type="number" name="my_age" id="age" min="0" max="99"> 
+	    </div>
+	      <div class="left">
+		<label for="date">出生日期:</label>
+	    </div>
+	      <div class="right">
+	      <input type="date" name="my_date" id="date"> 
+	      </div>
+	      <div class="left">
+		<label>性别</label>
+	      </div>
+	      <div class="right">
+		<label>男:<input type="radio" name="my_sex" value="boy"></label>
+		<label>女:<input type="radio" name="my_sex" value="girl"></label>
+	      </div>
 	  </fieldset>
 	  <fieldset>
 	    <legend>联系方式</legend>
+	    <div class="left">
+	      <label for="tel">手机号码:</label>
+	    </div>
+	    <div class="right">
+	      <input type="tel" name="my_tel" id="tel">
+	    </div>
+	    <div class="left">
+	      <label for="email">电子邮件:</label>
+	    </div>
+	    <div class="right">
+	      <input type="email" name="my_email" id="email">
+	    </div>
 	  </fieldset>
+	  <input type="submit" name="my_submit" value="提交">
 	</form>
       </div>
     </div>
