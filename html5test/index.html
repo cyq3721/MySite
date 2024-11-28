@@ -1,155 +1,118 @@
 <!doctype html>
 <html>
-  <head>
-    <title>注册</title>
-    <meta charset="utf-8" />
-    <style type="text/css">
-     body,input,textarea,select,option{
-       padding:0;
-       margin:0;
-       font-family:"微软雅黑";
-       font-size:14px;
-     }
-     .bg{
-       width:700px;
-       height:auto;
-       margin:0 auto;  /*左右居中显示*/
-      
-       padding:10px;
-       padding-top:0;
-       
-     }
-     .left{
-	 width:170px;
-	 height:30px;
-	 float:left;
-	 text-align:right;
-	 line-height:30px;
-	 margin:10px 0;
-	 padding-right:30px;
-	 color:#abc;
-     }
-     .right{
-	 width:470px;
-	 height:30px;
-	 float:left;
-	 margin:10px 0;
-	 line-height:30px;
-     }
-     .notice{
-	 width: 150px;
-	 height: 30px;
-	 float: right;
-	 font-size: 11px;
-	 line-height: 13px;
-	 color: red;
-	 display: none;
-     }
-     fieldset{
-s	 border:1px solid #555;
-       margin-bottom: 20px;
-       
-     }
-     legend{
-       color:#333;
-       font-size:14px;
-     }
-     input[name=my_submit]{
-	 width:100px;
-	 text-align:center;
-	 padding:0;
-	 display:block;
-	 margin:10px auto;
-	 background:#f8fdff;
-     }
-     input:focus:valid{
-	 outline:1px solid balue;
-     }
-     input:focus:invalid{
-	 outline:1px solid red;
-     }
-    </style>
-  </head>
-  <body>
-    <div class="bg">
-      <div class="bgfiled">
-	<form action="" method="post" id="form1">
-	  <fieldset>
-	    <legend>账号信息</legend>
-	    <div class="left">
-	      <label for="account">账号:</label>
-	    </div>
-	    <div class="right">
-	      <input type="text" name="my_account" id="account">
-	    </div>
-	    <div class="notice">
-	      请输入8位数字长度字符串，可包括数字、小写字母或者大写字母，不能输入符号！
-	    </div>
+    <head>
+	<title>用户注册</title>
+	<meta charset="utf-8" />
+	<link href="./css/style_test.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+	<div class="bg">
+	    	<form action="" method="post">
+	    <fieldset>
+	      <legend>账号信息</legend>
+              
+		<div class="left" >
+		    <label for="account">账号:</label>
+		</div>
+		<div class="right">
+		    <input type="text" name="my_account" id="account">
+	            <div class="notice">请输入8位数长度字符串，可包括数字、字母，不能输入符号
+		    </div>
+		</div>
+                
+                
 
-	    <div class="left">
-	      <label for="password">密码:</label>
-	    </div>
-	    <div class="right">
-	      <input type="password" name="my_password" id="password">
-	    </div>
-	    <div class="left">
-	      <label for="password2">再次输入密码:</label>
-	    </div>
-	    <div class="right">
-	      <input type="password" name="my_password2" id="password2">
-	    </div>
-	    <div class="notice">
-	      密码关系到您的账号安全，请记住您的密码，并且保持两次密码输入
-	      一致!
-	    </div>
-      </div>
-	  </fieldset>
-	  <fieldset>
-	    <legend>个人信息</legend>
-	    <div class="left">
-	      <label for="name">姓名:</label>
-	    </div>
-	    <div class="right">
-	      <input type="text" name="my_name" id="name"> 
-	    </div>
-	      <div class="left">
-	      <label for="age">年龄:</label>
-	    </div>
-	    <div class="right">
-	      <input type="number" name="my_age" id="age" min="0" max="99"> 
-	    </div>
-	      <div class="left">
-		<label for="date">出生日期:</label>
-	    </div>
-	      <div class="right">
-	      <input type="date" name="my_date" id="date"> 
-	      </div>
-	      <div class="left">
-		<label>性别</label>
-	      </div>
-	      <div class="right">
-		<label>男:<input type="radio" name="my_sex" value="boy"></label>
-		<label>女:<input type="radio" name="my_sex" value="girl"></label>
-	      </div>
-	  </fieldset>
-	  <fieldset>
-	    <legend>联系方式</legend>
-	    <div class="left">
-	      <label for="tel">手机号码:</label>
-	    </div>
-	    <div class="right">
-	      <input type="tel" name="my_tel" id="tel">
-	    </div>
-	    <div class="left">
-	      <label for="email">电子邮件:</label>
-	    </div>
-	    <div class="right">
-	      <input type="email" name="my_email" id="email">
-	    </div>
-	  </fieldset>
-	  <input type="submit" name="my_submit" value="提交">
-	</form>
-      </div>
-    </div>
-  </body>
+		<div class="left">
+		    <label for="password">密码:</label>
+		</div>
+		<div class="right">
+		    <input type="password" name="my_password" id="password">
+		</div>
+
+		<div class="notice">
+
+		</div>
+
+		<div class="left">
+		    <label for="password2">再次输入密码:</label>
+		</div>
+		<div class="right">
+		    <input type="password” name="my_password2" id="password2" >
+		    <div class="notice">密码关系到您的账号安全，请记住您的密码，并且保持两次密码输入一致!
+		    </div>
+		</div>
+	    </fieldset>
+	    <fieldset>
+		<legend>个人信息</legend>
+		<div class="left">
+		    <label for="name">姓名:</label>
+		</div>
+		<div class="right">
+		    <input type="text" name="my_name" id="name">
+		</div>
+			<div class="left">
+		    <label for="age">年龄:</label>
+		</div>
+		<div class="right">
+		    <input type="number" name="my_age" id="age" min="10" max="18">
+		</div>
+		<div class="left">
+		    <label for="date">出生日期:</label>
+		</div>
+		<div class="right">
+		    <input type="date" name="my_date" id="date">
+		</div>
+		<div class="left">
+		    <label>性别</label>
+		</div>
+		<div class="right">
+		    <label>男:<input type="radio" name="my_sex" value="boy"></label>
+		    <label>女:<input type="radio" name="my_sex" value="girl"></label>
+		</div>
+	    </fieldset>
+	    <fieldset>
+		<legend>联系方式</legend>
+		<div class="left">
+		    <label for="tel">手机号码:</label>
+		</div>
+		<div class="right">
+		    <input type="tel" name="my_tel" id="tel">
+		</div>
+n		<div class="left">
+		    <label for="email">电子邮件:</label>
+		</div>
+		<div class="right">
+		    <input type="email" id="email" name="my_email">
+		</div>
+		<div class="left">
+		    <input type="submit" name="my_submit" value="提交">
+		</div>
+	    </fieldset>
+		</form>
+		</div>
+
+
+
+		<script>
+		 
+		 window.onload=function(){
+		    
+		     //获得账号表单控件的引用
+		     var account=document.getElementById('account')
+		     //获得提示文字的引用
+		     var notice=document.getElementsByClassName('notice')
+		     //账号控件获得焦点的时候触发的事件
+		     account.onfocus=function(){
+			 //获得焦点的时候 提示文字变为显示状态
+			 notice[0].style.display="block"
+		     }
+		     //账号控件失去焦点的时候触发的事件
+		     account.onblur=function(){
+			 //失去焦点的时候 提示文字变为隐藏状态
+			 notice[0].style.display="none"
+		     }
+		 }
+		</script>
+		
+    </body>
 </html>

@@ -1,0 +1,49 @@
+.left{
+    width:140px;
+    height:30px;
+    float:left;
+    text-align:right;
+    line-height:30px;
+    margin:10px 0;
+    padding-right:20px;
+    color:grey;
+    font-size:12px;
+}
+.right{
+    width:470px;
+    height:30px;
+    float:left;
+    margin:10px 0;
+    line-height: 30px;
+    font-size:12px;
+    text-align: left;
+}
+.notice{
+    width:150px;
+    height:30px;
+    float:right;
+    margin:0 0;
+    text-align:center;
+    font-size:10px;
+    color:red;
+    display:none;
+    
+}
+.bg{
+    width:700px;
+    margin:auto auto;
+    border:1px solid pink;
+}
+fieldset{
+    border:1px solid grey;
+    margin-bottom:20px;
+    margin:auto auto;
+}
+legend{
+    color:grey;
+    font-size:14px;
+}
+
+input:focus{
+    outline:1px solid red;
+}
