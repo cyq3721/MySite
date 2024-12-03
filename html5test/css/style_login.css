@@ -25,19 +25,29 @@ body, input, textarea, seletc,option{
   line-height: 100px;
 }
 .button{
-    width:500px;
-    height:30px;
-    border:1px solid #888;
-    box-shadow:0 2px 1px #aaa inset;
+   
     padding-left:20px;
     vertical-align: middle;
     text-align: center;
+    line-height: 100px;
 }
 input{
     width:180px;
     height:30px;
     border:1px solid #888;
-    box-shadow:0 2px 1px #aaa inset;
+    box-shadow:2px 3px 3px  #aaa ;
     padding-left: 20px;
     vertical-align: middle;
+}
+
+input[name=login],input[name=sign]{
+    width:100px;
+    height:30px;
+    background:#fff;
+    padding:0;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[name=login]:active,input[name=sign]:active{
+    box-shadow:none;
 }
