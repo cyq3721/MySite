@@ -1,44 +1,27 @@
 <!doctype html>
 <html>
   <head>
-    <title>Bob's Auto Parts - Order form</title>
+    <title>orderform</title>
     <meta charset="utf-8" />
-    <link href="./css/Bob.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <form action="processorder.php" method="post">
-      <table>
-        <tr>
-          <td class="caption1">Item</td>
-          <td class="caption2">Quantity</td>
+      <table style="border:0px;">
+        <tr style="background:#cccccc;">
+          <td style="width:150px; text-align:center;">Item</td>
+          <td style="width:15px; text-align:center;">Quantity</td>
         </tr>
         <tr>
-          <td class="caption1_value">Oil</td>
-          <td class="caption1_value">
-            <input name="oilqty" type="text" placeholder="请输入购买Oil的数量" />
+          <td>Tires</td>
+          <td><input type="text" name="tireqty" size="3" maxlength="3" />
           </td>
         </tr>
-         <td class="caption1_value">Tires</td>
-         <td class="caption1_value">
-           <input name="tireqty" type="text" placeholder="请输入购买Tire的数量" />
-         </td> 
-        </tr>
         <tr>
-          <td class="caption1_value">Spark Plugs</td>
-          <td class="caption1_value">
-            <input name="sparkqty" type="text" placeholder="请输入购买Spark的数量" />
-
-
+          <td>Oil</td>
+          <td><input type="text" name="oilqty" size="3" maxlength="3" />
           </td>
-
         </tr>
         
-        </tr>
-        <tr>
-          <td class="button" colspan="2">
-            <input  type="submit" value="提交" />
-          </td>
-        </tr>
       </table>
     </form>
   </body>

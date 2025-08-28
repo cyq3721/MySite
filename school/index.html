@@ -1,0 +1,471 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>学生管理系统</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <style>
+      body {
+        background-color:#f5f7fb;
+        color:#333;
+        line-height: 1.6;hyu
+        
+      }
+      .container {
+        display: flex;
+        min-height:100vh;
+      }
+      .sidebar {
+        width: 200px;
+        background: linear-gradient(135deg, var(--primary), #1a5276);
+        color: grey;
+        padding: 20px 0;
+        box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+        z-index: 100;
+      }
+     </style>
+  </head>
+  <body>
+     <div class="container">
+    <!-- 侧边导航栏 -->
+    <div class="sidebar">
+      <div class="logo">
+        <h1><i class="fas fa-graduation-cap"></i> <span>学籍管理</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li class="active">
+          <a href="#"><i class="fas fa-home"></i> <span>仪表盘</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-user-graduate"></i> <span>学生管理</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span>教师管理</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-book"></i> <span>课程管理</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-calendar-alt"></i> <span>课程表</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-chart-bar"></i> <span>成绩统计</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-cog"></i> <span>系统设置</span></a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- 主内容区 -->
+    <div class="main-content">
+      <div class="header">
+        <h1 class="page-title"><i class="fas fa-user-graduate"></i> 学生管理系统</h1>
+        <div class="search-bar">
+          <input type="text" placeholder="搜索学生姓名、学号或班级...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" id="addStudentBtn">
+            <i class="fas fa-plus"></i> 添加学生
+          </button>
+          <button class="btn btn-secondary">
+            <i class="fas fa-file-export"></i> 导出数据
+          </button>
+        </div>
+      </div>
+      
+      <!-- 统计卡片 -->
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-icon bg-blue">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <h3>1,248</h3>
+            <p>学生总数</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-green">
+            <i class="fas fa-male"></i>
+          </div>
+          <div class="stat-info">
+            <h3>682</h3>
+            <p>男生人数</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-orange">
+            <i class="fas fa-female"></i>
+          </div>
+          <div class="stat-info">
+            <h3>566</h3>
+            <p>女生人数</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon bg-blue">
+            <i class="fas fa-chalkboard"></i>
+          </div>
+          <div class="stat-info">
+            <h3>32</h3>
+            <p>班级总数</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 学生列表 -->
+      <div class="students-section">
+        <div class="section-header">
+          <h2><i class="fas fa-list"></i> 学生列表</h2>
+          <div class="filters">
+            <select class="filter-select">
+              <option>所有年级</option>
+              <option>高一</option>
+              <option>高二</option>
+              <option>高三</option>
+            </select>
+            <select class="filter-select">
+              <option>所有班级</option>
+              <option>1班</option>
+              <option>2班</option>
+              <option>3班</option>
+              <option>4班</option>
+            </select>
+            <select class="filter-select">
+              <option>所有状态</option>
+              <option>在读</option>
+              <option>休学</option>
+              <option>毕业</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="students-grid">
+          <!-- 学生卡片1 -->
+          <div class="student-card">
+            <div class="student-header">
+              <div class="student-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>张明</h3>
+              <p>高一(3)班 | 学号: S2023001</p>
+            </div>
+            <div class="student-body">
+              <div class="student-info">
+                <p>
+                  <span>性别:</span>
+                  <span>男</span>
+                </p>
+                <p>
+                  <span>年龄:</span>
+                  <span>16</span>
+                </p>
+                <p>
+                  <span>联系电话:</span>
+                  <span>138****1234</span>
+                </p>
+                <p>
+                  <span>入学日期:</span>
+                  <span>2023-09-01</span>
+                </p>
+              </div>
+              <div class="student-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-edit"></i> 编辑
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i> 删除
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 学生卡片2 -->
+          <div class="student-card">
+            <div class="student-header">
+              <div class="student-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>李小红</h3>
+              <p>高二(2)班 | 学号: S2022005</p>
+            </div>
+            <div class="student-body">
+              <div class="student-info">
+                <p>
+                  <span>性别:</span>
+                  <span>女</span>
+                </p>
+                <p>
+                  <span>年龄:</span>
+                  <span>17</span>
+                </p>
+                <p>
+                  <span>联系电话:</span>
+                  <span>139****5678</span>
+                </p>
+                <p>
+                  <span>入学日期:</span>
+                  <span>2022-09-01</span>
+                </p>
+              </div>
+              <div class="student-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-edit"></i> 编辑
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i> 删除
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 学生卡片3 -->
+          <div class="student-card">
+            <div class="student-header">
+              <div class="student-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>王刚</h3>
+              <p>高三(1)班 | 学号: S2021103</p>
+            </div>
+            <div class="student-body">
+              <div class="student-info">
+                <p>
+                  <span>性别:</span>
+                  <span>男</span>
+                </p>
+                <p>
+                  <span>年龄:</span>
+                  <span>18</span>
+                </p>
+                <p>
+                  <span>联系电话:</span>
+                  <span>137****9012</span>
+                </p>
+                <p>
+                  <span>入学日期:</span>
+                  <span>2021-09-01</span>
+                </p>
+              </div>
+              <div class="student-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-edit"></i> 编辑
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i> 删除
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 学生卡片4 -->
+          <div class="student-card">
+            <div class="student-header">
+              <div class="student-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>赵雪</h3>
+              <p>高一(4)班 | 学号: S2023012</p>
+            </div>
+            <div class="student-body">
+              <div class="student-info">
+                <p>
+                  <span>性别:</span>
+                  <span>女</span>
+                </p>
+                <p>
+                  <span>年龄:</span>
+                  <span>15</span>
+                </p>
+                <p>
+                  <span>联系电话:</span>
+                  <span>135****3456</span>
+                </p>
+                <p>
+                  <span>入学日期:</span>
+                  <span>2023-09-01</span>
+                </p>
+              </div>
+              <div class="student-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-edit"></i> 编辑
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i> 删除
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 学生卡片5 -->
+          <div class="student-card">
+            <div class="student-header">
+              <div class="student-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>刘洋</h3>
+              <p>高二(3)班 | 学号: S2022018</p>
+            </div>
+            <div class="student-body">
+              <div class="student-info">
+                <p>
+                  <span>性别:</span>
+                  <span>男</span>
+                </p>
+                <p>
+                  <span>年龄:</span>
+                  <span>17</span>
+                </p>
+                <p>
+                  <span>联系电话:</span>
+                  <span>136****7890</span>
+                </p>
+                <p>
+                  <span>入学日期:</span>
+                  <span>2022-09-01</span>
+                </p>
+              </div>
+              <div class="student-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-edit"></i> 编辑
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i> 删除
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 学生卡片6 -->
+          <div class="student-card">
+            <div class="student-header">
+              <div class="student-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <h3>陈思思</h3>
+              <p>高三(2)班 | 学号: S2021125</p>
+            </div>
+            <div class="student-body">
+              <div class="student-info">
+                <p>
+                  <span>性别:</span>
+                  <span>女</span>
+                </p>
+                <p>
+                  <span>年龄:</span>
+                  <span>18</span>
+                </p>
+                <p>
+                  <span>联系电话:</span>
+                  <span>188****1122</span>
+                </p>
+                <p>
+                  <span>入学日期:</span>
+                  <span>2021-09-01</span>
+                </p>
+              </div>
+              <div class="student-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-edit"></i> 编辑
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i> 删除
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 添加学生模态框 -->
+  <div class="modal" id="addStudentModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-user-plus"></i> 添加新学生</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="studentForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentName">学生姓名</label>
+              <input type="text" id="studentName" class="form-control" placeholder="请输入学生姓名" required>
+            </div>
+            <div class="form-group">
+              <label for="studentGender">性别</label>
+              <select id="studentGender" class="form-control" required>
+                <option value="">请选择性别</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentId">学号</label>
+              <input type="text" id="studentId" class="form-control" placeholder="请输入学号" required>
+            </div>
+            <div class="form-group">
+              <label for="studentAge">年龄</label>
+              <input type="number" id="studentAge" class="form-control" placeholder="请输入年龄" min="10" max="25" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentGrade">年级</label>
+              <select id="studentGrade" class="form-control" required>
+                <option value="">请选择年级</option>
+                <option value="高一">高一</option>
+                <option value="高二">高二</option>
+                <option value="高三">高三</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="studentClass">班级</label>
+              <select id="studentClass" class="form-control" required>
+                <option value="">请选择班级</option>
+                <option value="1班">1班</option>
+                <option value="2班">2班</option>
+                <option value="3班">3班</option>
+                <option value="4班">4班</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="studentPhone">联系电话</label>
+            <input type="tel" id="studentPhone" class="form-control" placeholder="请输入联系电话" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="enrollmentDate">入学日期</label>
+            <input type="date" id="enrollmentDate" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="studentAddress">家庭住址</label>
+            <input type="text" id="studentAddress" class="form-control" placeholder="请输入家庭住址">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="cancelBtn">取消</button>
+        <button class="btn btn-primary" id="saveBtn">保存学生信息</button>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
+
+
+ 
+  
+ 
+
